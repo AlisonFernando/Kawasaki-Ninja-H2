@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kawasaki H2</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="imagem/png" href="imagens/icon_page/motorbike.png" />
+</head>
+<body>
+      <section class="main">
+            <header>
+                <a href="#"><img src="imagens/kawasaki-logo.jpg" class="logo"></a>
+                <ul class="navigation">
+                    <li><a href="#">Top Features</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Store</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>            
+            </header>
+            <div class="content">
+                <h2>Ready To <span>Race</span></h2>
+                <a href="#" class="btn">Ride Now</a>
+                <img src="imagens/h2motos.png" class="moto">
+            </div>
+
+            <div class="slider">
+                <div class="slides active">
+                    <h2><span>Engine</span><br>998 cc</h2>
+                    <h2><span>Max Speed</span><br>400 km/h</h2>
+                </div>
+                <div class="slides">
+                    <h2><span>Mileage</span><br>15 km/l</h2>
+                    <h2><span>0 - 100 Km</span><br>2,6 seconds</h2>
+                </div>
+                <div class="slides">
+                    <h2><span>Wheels</span><br>17-Inch-Alloy</h2>
+                    <h2><span>Tyre type</span><br>Tubeless</h2>
+                </div>
+            </div>
+
+            <div class="footer">
+                <ul class="sci">
+                    <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                    <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                    <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                </ul>
+                <div class="dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </section>      
+    
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+        <script>
+            const slides = document.querySelectorAll('.slides');
+            const dots = document.querySelectorAll('.dot');
+
+            function setActive(i){
+                for(slide of slides)
+                slide.classList.remove('active')
+                slides[i].classList.add('active')
+
+                for(dot of dots)
+                dot.classList.remove('active');
+                dots[i].classList.add('active');
+            }
+
+            for(let j = 0; j<dots.length; j++){
+                dots[j].addEventListener('click', function(){
+                    setActive(j);
+                })
+            }
+        </script>
+</body>
+</html>
